@@ -48,6 +48,6 @@ t = n_term(n)
 print(f"Al n-lea termen din sir este: {t}")
 
 """
-for i in range(1, n):
+for i in range(1, n + 1):
     t = n_term(i)
     print(f"Al {i}-lea termen din sir este: {t}")
