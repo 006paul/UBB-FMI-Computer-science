@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 *.exe
 *.lst
 *.obj
+=======
+.idea/
+>>>>>>> af9a9a1 (Fundamentele programarii lab3)
 .DS_Store
 /.DS_Store
 # Byte-compiled / optimized / DLL files
