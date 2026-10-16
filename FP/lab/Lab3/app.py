@@ -1,5 +1,10 @@
 
 def property1(numbers):
+    '''
+    Calculeaza lungimea secventei maxime dintr-un sir cu proprietatea ca numerele sunt distincte
+    :param numbers: Lista de numere intregi
+    :return: Numar intreg max_lenght - lungimea secventei maxime cu prop1
+    '''
     curr_list = []
     max_length = 0
     for num in numbers:
@@ -11,6 +16,12 @@ def property1(numbers):
     return max_length
 
 def property2(numbers):
+    '''
+    Calculeaza lungimea secventei maxime dintr-un sir cu proprietatea ca diferentele
+    numbers[i+1] - numbers[i] si numbers[i+2] - numbers[i+1] au semne contrare
+    :param numbers: Lista de numere intregi
+    :return: Numar intreg max_length - lungimea secventei maxime cu prop2
+    '''
     if len(numbers) < 2:
         return 0
     if len(numbers) == 2:
@@ -26,10 +37,14 @@ def property2(numbers):
                 max_lenght = curr_lenght
         elif dif1 * dif2 > 0:
             curr_lenght = 2
-
     return max_lenght
 
 def set_numbers_to_integer(numbers):
+    '''
+    Transforma elementele listei numbers din string-uri in int
+    :param numbers: Lista de string-uri
+    :return: Lista de numere intregi numbers
+    '''
     for num in range(len(numbers)):
         try:
             numbers[num] = int(numbers[num])
@@ -52,7 +67,7 @@ def main():
     while True:
         command = input("Selectati o comanda: \n"
                         "1: Returneaza lungimea celei mai lungi secvente cu elemente distincte \n"
-                        "2: Returneaza lungimea celei mai lungi secvente in care sume consecutive doua cate doua au semne contrare \n"
+                        "2: Returneaza lungimea celei mai lungi secvente in care diferentele consecutive doua cate doua au semne contrare \n"
                         "exit: Opreste programul \n")
         if command == "exit":
             print("bye")
