@@ -34,7 +34,8 @@ def set_numbers_to_integer(numbers):
         try:
             numbers[num] = int(numbers[num])
         except ValueError:
-            print("Valoare invalid")
+            print("Valoare invalida")
+            break
     return numbers
 
 def test():
@@ -54,12 +55,13 @@ def main():
                         "2: Returneaza lungimea celei mai lungi secvente in care sume consecutive doua cate doua au semne contrare \n"
                         "exit: Opreste programul \n")
         if command == "exit":
+            print("bye")
             break
         elif command in properties:
-            numbers = input("Introduceti un sirul de numere intregi: \n")
+            numbers = input("Introduceti un sir de numere intregi: \n")
             numbers = numbers.split()
             numbers = set_numbers_to_integer(numbers)
-            print(properties[command](numbers))
+            print(f"Lungimea secventei maxime este: {properties[command](numbers)}")
         elif command != "":
             print(f"{command} nu este o comanda valida!")
             continue
